@@ -1,0 +1,5 @@
+C:\Users\ioes\Documents\GitHub\webproject\webproject\bin\webproject.dll
+C:\Users\ioes\Documents\GitHub\webproject\webproject\bin\webproject.pdb
+C:\Users\ioes\Documents\GitHub\webproject\webproject\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ioes\Documents\GitHub\webproject\webproject\obj\Debug\webproject.dll
+C:\Users\ioes\Documents\GitHub\webproject\webproject\obj\Debug\webproject.pdb

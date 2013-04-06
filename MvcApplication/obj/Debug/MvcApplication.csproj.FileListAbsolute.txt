@@ -1,5 +1,0 @@
-c:\users\ioes\documents\visual studio 2010\Projects\MvcApplication\MvcApplication\bin\MvcApplication.dll
-c:\users\ioes\documents\visual studio 2010\Projects\MvcApplication\MvcApplication\bin\MvcApplication.pdb
-c:\users\ioes\documents\visual studio 2010\Projects\MvcApplication\MvcApplication\obj\Debug\ResolveAssemblyReference.cache
-c:\users\ioes\documents\visual studio 2010\Projects\MvcApplication\MvcApplication\obj\Debug\MvcApplication.dll
-c:\users\ioes\documents\visual studio 2010\Projects\MvcApplication\MvcApplication\obj\Debug\MvcApplication.pdb
