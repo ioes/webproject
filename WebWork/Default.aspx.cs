@@ -19,7 +19,7 @@ namespace WebWork
             protected string ConnectionString;
             public DataBase()
             {
-                ConnectionString = "Data Source=IOES-PC;Initial Catalog=web数据库;Integrated Security=True";
+                ConnectionString = "Server=73a320d8-4297-45cb-bb78-a1c6003d7a18.sqlserver.sequelizer.com;Database=db73a320d8429745cbbb78a1c6003d7a18;User ID=pgmjzoqlzyfawdci;Password=tJK5XLzYEJdwJLZhYKaiWyPp3jS7EcYTtMUZCYq8XNYuDrZqgeiqh5E44ubM3BsB;";
             }
             private void Open()//open数据库
             {
@@ -50,13 +50,13 @@ namespace WebWork
         public void initdata()//创造试卷
         {
             DataBase db = new DataBase();
-            DataSet ds1 = db.GetDataSet("select top 3 * from SingleProblem order by newid()");
+            DataSet ds1 = db.GetDataSet("select top 1 * from SingleProblem order by newid()");
             if (ds1.Tables[0].Rows.Count > 0)
             {
                 GridView1.DataSource = ds1;
                 GridView1.DataBind();
             }
-            DataSet ds2 = db.GetDataSet("select top 2 * from MutilProblem order by newid()");
+            DataSet ds2 = db.GetDataSet("select top 1 * from MutilProblem order by newid()");
             if (ds2.Tables[0].Rows.Count > 0)
             {
                 GridView2.DataSource = ds2;
