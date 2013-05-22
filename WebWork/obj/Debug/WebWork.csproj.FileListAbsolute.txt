@@ -1,0 +1,5 @@
+c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\bin\WebWork.dll
+c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\bin\WebWork.pdb
+c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\obj\Debug\WebWork.csprojResolveAssemblyReference.cache
+c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\obj\Debug\WebWork.dll
+c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\obj\Debug\WebWork.pdb
