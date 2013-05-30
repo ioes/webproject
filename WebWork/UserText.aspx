@@ -8,8 +8,8 @@
     <title></title>
 </head>
 <body>
-    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/top01.jpg" />
     <form id="form1" runat="server">         
+        <asp:ImageButton ID="ImageButton1" ImageUrl="~/Images/top01.jpg"  runat="server" OnClick="ImageButton1_Click" />
         <div>
             <asp:Table ID="Table1" runat="server"></asp:Table>
             <asp:Label ID="Label101" runat="server" Text="请选择科目："></asp:Label>
@@ -194,6 +194,8 @@
             </asp:GridView>
             <asp:Button ID="Button1" runat="server" Text="交卷" OnClick="Button1_Click" Height="33px" Width="154px" Visible="false" />
             <asp:Label ID="Label100" runat="server" Font-Size="20pt" ForeColor="#FF3300"></asp:Label>
+            <br />
+            <asp:Button ID="Button3" runat="server" Height="33px" OnClick="Button3_Click" Text="保存成绩" Width="154px" Visible="False" />
         </div>
     </form>
 </body>

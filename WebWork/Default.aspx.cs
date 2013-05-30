@@ -18,5 +18,10 @@ namespace WebWork
         {
             Response.Redirect("UserText.aspx");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserScore.aspx");
+        }
     }
 }

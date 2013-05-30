@@ -58,17 +58,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="UserScore.aspx" />
     <Content Include="UserText.aspx" />
     <Content Include="Images\top01.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBaseClass\DataBase.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserScore.aspx.cs">
+      <DependentUpon>UserScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserScore.aspx.designer.cs">
+      <DependentUpon>UserScore.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserText.aspx.cs">
       <DependentUpon>UserText.aspx</DependentUpon>

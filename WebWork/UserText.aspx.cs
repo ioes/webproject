@@ -7,71 +7,32 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using WebWork.DataBaseClass;
 
 
 namespace WebWork
 {
     public partial class Default : System.Web.UI.Page
     {
-        public class DataBase//数据库相关操作
-        {
-            protected SqlConnection Connection;
-            protected string ConnectionString;
-            public SqlParameter Para;
-            public DataBase()
-            {
-                ConnectionString = "Server=73a320d8-4297-45cb-bb78-a1c6003d7a18.sqlserver.sequelizer.com;Database=db73a320d8429745cbbb78a1c6003d7a18;User ID=pgmjzoqlzyfawdci;Password=tJK5XLzYEJdwJLZhYKaiWyPp3jS7EcYTtMUZCYq8XNYuDrZqgeiqh5E44ubM3BsB;";
-            }
-            public void Open()//open数据库
-            {
-                if (Connection == null)
-                {
-                    Connection = new SqlConnection(ConnectionString);
-                    Connection.Open();
-                }
-            }
-            public void Close()//close数据库
-            {
-                if (Connection.State.Equals(ConnectionState.Open))
-                {
-                    Connection.Close();
-                }
-            }
-            public DataSet GetDataSet(string Name)//从数据库取出题目
-           {
-                Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Parameters.Add(Para);
-            cmd.CommandText = Name;
-            cmd.Connection = Connection;
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataSet dataset = new DataSet();
-            adapter.Fill(dataset);
-            cmd.Parameters.Clear();
-                Close();
-            return dataset;
-            }
-        }
-
         public void initdata()//创造试卷
         {
             string str = RadioButtonList1.SelectedValue;
             DataBase db = new DataBase();
-            db.Para = new SqlParameter("@Style",str);
-            db.Para.Value = str;
-            DataSet ds1 = db.GetDataSet("select top 2 * from SingleProblem where Style=@Style order by newid()");
+            SqlParameter para = new SqlParameter("@Style", str);
+            para.Value = str;
+            DataSet ds1 = db.GetDataSet("select top 2 * from SingleProblem where Style=@Style order by newid()",para);
             if (ds1.Tables[0].Rows.Count > 0)
             {
                 GridView1.DataSource = ds1;
                 GridView1.DataBind();
             }
-            DataSet ds2 = db.GetDataSet("select top 1 * from MutilProblem where Style=@Style order by newid()");
+            DataSet ds2 = db.GetDataSet("select top 1 * from MutilProblem where Style=@Style order by newid()",para);
             if (ds2.Tables[0].Rows.Count > 0)
             {
                 GridView2.DataSource = ds2;
                 GridView2.DataBind();
             }
-            DataSet ds3 = db.GetDataSet("select top 2 * from JudgeProblem where Style=@Style order by newid()");
+            DataSet ds3 = db.GetDataSet("select top 2 * from JudgeProblem where Style=@Style order by newid()",para);
             if (ds3.Tables[0].Rows.Count > 0)
             {
                 GridView3.DataSource = ds3;
@@ -176,6 +137,7 @@ namespace WebWork
             if (!IsPostBack)
             {
                 Button1.Attributes.Add("OnClick", "javascript:return confirm('要交卷吗？')");
+                Button3.Attributes.Add("OnClick", "javascript:return confirm('确定保存吗？')");
             }
         }
 
@@ -194,6 +156,23 @@ namespace WebWork
             Button2.Visible = false;
             initdata();
             Button1.Visible = true;
+            Button3.Visible = true;
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            int Grade =PageSubmit();
+            DataBase db2 = new DataBase();
+            string sqlstr = "insert into UserScore values('a2010052815','ljc',@Grade)";
+            SqlParameter para = new SqlParameter("@Grade", Grade);
+            para.Value = Grade;
+            db2.Insert(sqlstr,para);
+            //Response.Redirect("UserScore.aspx"); 
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("default.aspx");
         }
     }
 }

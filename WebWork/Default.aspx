@@ -38,6 +38,7 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" Text="测试" Height="35px" OnClick="Button1_Click" Width="106px" />
+            <asp:Button ID="Button2" runat="server" Height="34px" Text="查看成绩" Width="82px" OnClick="Button2_Click" />
         </p>
     </form>
 </body>
