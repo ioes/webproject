@@ -58,7 +58,7 @@ namespace WebWork.DataBaseClass
             Close();
             return dataset;
         }
-        public void Insert(string str,SqlParameter para)
+        public void Insert(string str,SqlParameter para)//插入数据
         {
             Open();
             SqlCommand cmd = new SqlCommand();

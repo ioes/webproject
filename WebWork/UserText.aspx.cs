@@ -163,7 +163,7 @@ namespace WebWork
         {
             int Grade =PageSubmit();
             DataBase db2 = new DataBase();
-            string sqlstr = "insert into UserScore values('a2010052815','ljc',@Grade)";
+            string sqlstr = "insert into UserScore values('2010052815','ljc',@Grade)";
             SqlParameter para = new SqlParameter("@Grade", Grade);
             para.Value = Grade;
             db2.Insert(sqlstr,para);

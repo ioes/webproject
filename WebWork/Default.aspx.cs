@@ -14,14 +14,19 @@ namespace WebWork
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("UserText.aspx");
-        }
-
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("UserScore.aspx");
+            txtUserID.Text = "";
+            txtPwd.Text = "";
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            if (txtUserID.Text == "ljc" && txtPwd.Text == "123")
+            {
+                Panel2.Visible = true;
+                Panel1.Visible = false;
+            }
         }
     }
 }
