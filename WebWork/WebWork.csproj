@@ -57,15 +57,35 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddQue.aspx" />
+    <Content Include="AllQuestion.aspx" />
     <Content Include="default.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="ErrorQue.aspx" />
+    <Content Include="Images\jnu.jpg" />
+    <Content Include="Images\背景图片.jpg" />
+    <Content Include="Images\背景图片2.jpg" />
     <Content Include="UserScore.aspx" />
     <Content Include="UserText.aspx" />
     <Content Include="Images\top01.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddQue.aspx.cs">
+      <DependentUpon>AddQue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddQue.aspx.designer.cs">
+      <DependentUpon>AddQue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllQuestion.aspx.cs">
+      <DependentUpon>AllQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllQuestion.aspx.designer.cs">
+      <DependentUpon>AllQuestion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataBaseClass\DataBase.cs" />
+    <Compile Include="DataBaseClass\Question.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -73,12 +93,12 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="ErrorQue.aspx.cs">
+      <DependentUpon>ErrorQue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="ErrorQue.aspx.designer.cs">
+      <DependentUpon>ErrorQue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

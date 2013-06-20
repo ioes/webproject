@@ -58,11 +58,15 @@ namespace WebWork.DataBaseClass
             Close();
             return dataset;
         }
-        public void Insert(string str,SqlParameter para)//插入数据
+        public void Insert(string str,SqlParameter[] para)//插入数据
         {
             Open();
             SqlCommand cmd = new SqlCommand();
-            cmd.Parameters.Add(para);
+            int num=para.Count();
+            for (int i = 0; i < num; i++)
+            {
+                cmd.Parameters.Add(para[i]);
+            }
             cmd.CommandText = str;
             cmd.Connection = Connection;
             cmd.ExecuteNonQuery();

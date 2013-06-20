@@ -14,7 +14,7 @@ namespace WebWork
 
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+       /* protected void Button2_Click(object sender, EventArgs e)
         {
             txtUserID.Text = "";
             txtPwd.Text = "";
@@ -22,11 +22,17 @@ namespace WebWork
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            HttpCookie cookie = new HttpCookie("UserID");
+            cookie.Values.Add("Name", "ljc");
+            cookie.Expires = DateTime.MaxValue;
+            Response.Cookies.Add(cookie);
+            string ID = cookie.Values["Name"];
             if (txtUserID.Text == "ljc" && txtPwd.Text == "123")
             {
+                Label3.Text = ID;
                 Panel2.Visible = true;
                 Panel1.Visible = false;
             }
-        }
+        }*/
     }
 }

@@ -1,28 +1,30 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserText.aspx.cs" Inherits="WebWork.Default" masterpagefile="~/Site1.Master"%>
+﻿  <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserText.aspx.cs" Inherits="WebWork.Default" masterpagefile="~/Site1.Master"%>
 
 <asp:content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-            <br />
-        <asp:Panel ID="Panel2" runat="server" Visible="false">
-            <asp:Label ID="Label1" runat="server" Text="欢迎您，ljc"></asp:Label>
-            </asp:Panel>
-        <asp:TreeView ID="TreeView1" runat="server" BackColor="#CCFFFF" ForeColor="Black" Width="230px" ImageSet="BulletedList3" ShowExpandCollapse="False" BorderColor="#99FFCC" BorderStyle="Solid">
+     <div style="border-style: double; border-color: #000000; font-size: large;">
+             <br />
+        <asp:TreeView ID="TreeView1" runat="server"   BackColor="#CCFFFF" ForeColor="Black" Width="251px" ImageSet="BulletedList3" ShowExpandCollapse="False" BorderColor="#99FFCC" BorderStyle="Solid" Height="135px">
             <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
             <Nodes>
                 <asp:TreeNode Text="试题库系统" Value="试题库系统" NavigateUrl="~/default.aspx">
                     <asp:TreeNode Text="在线考试" Value="在线考试" NavigateUrl="~/UserText.aspx"></asp:TreeNode>
                     <asp:TreeNode Text="查看成绩" Value="查看成绩" NavigateUrl="~/UserScore.aspx"></asp:TreeNode>
-                    <asp:TreeNode Text="错题复习   " Value="错题库"></asp:TreeNode>
-                    <asp:TreeNode Text="用户信息" Value="用户信息"></asp:TreeNode>
+                    <asp:TreeNode Text="错题复习   " Value="错题库" NavigateUrl="~/ErrorQue.aspx"></asp:TreeNode>
+                    <asp:TreeNode Text="添加试题" Value="用户信息" NavigateUrl="~/AddQue.aspx"></asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/AllQuestion.aspx" Text="考试题库" Value="考试题库"></asp:TreeNode>
                 </asp:TreeNode>
             </Nodes>
             <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
             <ParentNodeStyle Font-Bold="False" />
             <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
-        </asp:TreeView>
-        <br />
-</asp:content>
+        </asp:TreeView><br />
+     </div>
+     <br />
+     <asp:Image ID="Image1" runat="server"  ImageUrl="~/Images/jnu.jpg" Width="150px" />
+    </asp:content>
 
 <asp:content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <div style="border-style: double; border-color: #000000">
             <asp:Table ID="Table1" runat="server"></asp:Table>
             <asp:Label ID="Label101" runat="server" Text="请选择科目："></asp:Label>
             <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True">
@@ -135,7 +137,7 @@
                                     <tr>
                                         <td colspan="3">
                                             <asp:Label ID="Label7" runat="server" Text="你的答案错误，正确的答案是：" Visible="False" ForeColor="Red"></asp:Label>
-                                            <asp:Label ID="Label8" runat="server" Text='<%# Eval("Answer") %>' Visible="False" ForeColor="Red"></asp:Label>
+                                            <asp:Label ID="Label8" runat="server" Text='<%# Eval("Answer") %>' Visible="False" ForeColor="Red"></asp:Label>                  
                                         </td>
                                     </tr>
                                 </tr>
@@ -169,7 +171,6 @@
                                         </asp:Label>
                                         <asp:Label ID="Label10" runat="server" Text='<%# Eval("Title","、{0}") %>'>
                                         </asp:Label><br />
-
                                         <br />
                                     </td>
                                 </tr>
@@ -209,4 +210,5 @@
             <br />
             <asp:Button ID="Button3" runat="server" Height="33px" OnClick="Button3_Click" Text="保存成绩" Width="154px" Visible="False" />
         </div>
+    
     </asp:content>
