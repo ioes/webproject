@@ -207,6 +207,7 @@
             </asp:GridView>
             <asp:Button ID="Button1" runat="server" Text="交卷" OnClick="Button1_Click" Height="33px" Width="154px" Visible="false" />
             <asp:Label ID="Label100" runat="server" Font-Size="20pt" ForeColor="#FF3300"></asp:Label>
+            <asp:Label ID="Label16" runat="server"  Font-Size="20pt" ForeColor="#FF3300"></asp:Label>
             <br />
             <asp:Button ID="Button3" runat="server" Height="33px" OnClick="Button3_Click" Text="保存成绩" Width="154px" Visible="False" />
         </div>

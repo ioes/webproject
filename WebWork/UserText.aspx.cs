@@ -174,7 +174,8 @@ namespace WebWork
         protected void Button1_Click(object sender, EventArgs e)
         {
             int Grade = PageSubmit();
-            Label100.Text = "你的成绩是" + Convert.ToString(Grade) + "分";
+            Label100.Text = "你的成绩是:";
+            Label16.Text = Convert.ToString(Grade);
             this.Button1.Enabled = false;
             Button1.Visible = false;
         }
@@ -193,7 +194,7 @@ namespace WebWork
         {
             DateTime dt = System.DateTime.Now;
             string Time = Convert.ToString(dt);
-            int Grade =PageSubmit();
+            int Grade = int.Parse(Label16.Text);
             DataBase db2 = new DataBase();
             string sqlstr = "insert into UserScore values('2010052815','ljc',@Grade,@Time)";
             SqlParameter[] para = new SqlParameter[2];

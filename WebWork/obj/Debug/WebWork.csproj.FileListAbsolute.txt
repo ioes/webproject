@@ -3,3 +3,8 @@ c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\bin\WebWork.
 c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\obj\Debug\WebWork.csprojResolveAssemblyReference.cache
 c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\obj\Debug\WebWork.dll
 c:\users\ioes\documents\visual studio 2012\Projects\WebWork\WebWork\obj\Debug\WebWork.pdb
+C:\Users\ioes\Documents\GitHub\webproject\WebWork\bin\WebWork.dll
+C:\Users\ioes\Documents\GitHub\webproject\WebWork\bin\WebWork.pdb
+C:\Users\ioes\Documents\GitHub\webproject\WebWork\obj\Debug\WebWork.csprojResolveAssemblyReference.cache
+C:\Users\ioes\Documents\GitHub\webproject\WebWork\obj\Debug\WebWork.dll
+C:\Users\ioes\Documents\GitHub\webproject\WebWork\obj\Debug\WebWork.pdb
