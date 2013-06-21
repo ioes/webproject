@@ -36,15 +36,15 @@ namespace WebWork.DataBaseClass
         }
         public void InsertMut()
         {
-            string str = "insert into MutilProblem values(@ID,@Title,@AnswerA,@AnswerB,@AnswerC,@AnswerD,@Answer,@Style)";
+            string str = "insert into MutilProblem values(@ID,@AnswerA,@AnswerB,@AnswerC,@AnswerD,@Answer,@Title,@Style)";
             SqlParameter[] para = new SqlParameter[8];
-            para[0] = new SqlParameter("@ID", id);
-            para[1] = new SqlParameter("@Title", title);
-            para[2] = new SqlParameter("@AnswerA", answera);
-            para[3] = new SqlParameter("@AnswerB", answerb);
-            para[4] = new SqlParameter("@AnswerC", answerc);
-            para[5] = new SqlParameter("@AnswerD", answerd);
-            para[6] = new SqlParameter("@Answer", answer);
+            para[0] = new SqlParameter("@ID", id);  
+            para[1] = new SqlParameter("@AnswerA", answera);
+            para[2] = new SqlParameter("@AnswerB", answerb);
+            para[3] = new SqlParameter("@AnswerC", answerc);
+            para[4] = new SqlParameter("@AnswerD", answerd);
+            para[5] = new SqlParameter("@Answer", answer);
+            para[6] = new SqlParameter("@Title", title);
             para[7] = new SqlParameter("@Style", style);
             db.Insert(str, para);
         }
