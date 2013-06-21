@@ -17,7 +17,7 @@ namespace WebWork
             if (!IsPostBack)
             {
                 Button1.Attributes.Add("OnClick", "javascript:return confirm('确定添加吗？')");
-                Button1.Attributes.Add("OnClick", "javascript:return confirm('确定添加吗？')");
+                Button2.Attributes.Add("OnClick", "javascript:return confirm('确定添加吗？')");
                 Button3.Attributes.Add("OnClick", "javascript:return confirm('确定添加吗？')");
             }
         }
