@@ -59,7 +59,11 @@
   <ItemGroup>
     <Content Include="AddQue.aspx" />
     <Content Include="AllQuestion.aspx" />
-    <Content Include="default.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="WebWork1.aspx" />
+    <Content Include="WebWork2.aspx" />
+    <Content Include="WebWork3.aspx" />
+    <Content Include="WebWork4.aspx" />
     <Content Include="ErrorQue.aspx" />
     <Content Include="Images\jnu.jpg" />
     <Content Include="Images\background.jpg" />
@@ -86,12 +90,40 @@
     </Compile>
     <Compile Include="DataBaseClass\DataBase.cs" />
     <Compile Include="DataBaseClass\Question.cs" />
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebWork1.aspx.cs">
+      <DependentUpon>WebWork1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebWork1.aspx.designer.cs">
+      <DependentUpon>WebWork1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebWork2.aspx.cs">
+      <DependentUpon>WebWork2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebWork2.aspx.designer.cs">
+      <DependentUpon>WebWork2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebWork3.aspx.cs">
+      <DependentUpon>WebWork3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebWork3.aspx.designer.cs">
+      <DependentUpon>WebWork3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebWork4.aspx.cs">
+      <DependentUpon>WebWork4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebWork4.aspx.designer.cs">
+      <DependentUpon>WebWork4.aspx</DependentUpon>
     </Compile>
     <Compile Include="ErrorQue.aspx.cs">
       <DependentUpon>ErrorQue.aspx</DependentUpon>
