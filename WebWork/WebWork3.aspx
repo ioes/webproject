@@ -18,7 +18,7 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="密码不能为空" ForeColor="Red" ControlToValidate="TextBox2" Display="None"></asp:RequiredFieldValidator>
         <br />
         确认密码:<asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>
-        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="密码输入不一致" ForeColor="Red" ControlToValidate="TextBox3" ControlToCompare="TextBox1" Display="None"></asp:CompareValidator>
+        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="密码输入不一致" ForeColor="Red" ControlToValidate="TextBox3" ControlToCompare="TextBox2" Display="None"></asp:CompareValidator>
         <br />
         联系地址:<asp:TextBox ID="TextBox4" runat="server" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="联系地址不能为空" ForeColor="Red" ControlToValidate="TextBox4" Display="None"></asp:RequiredFieldValidator>
